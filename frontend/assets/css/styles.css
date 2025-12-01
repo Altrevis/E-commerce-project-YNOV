@@ -1,93 +1,298 @@
 /* Styles généraux */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f8f9fa;
-    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    line-height: 1.6;
 }
 
 .navbar-brand {
     font-weight: bold;
     font-size: 1.5rem;
+    color: #ffffff !important;
 }
 
 .container {
     max-width: 1200px;
 }
 
+/* Styles pour la navbar */
+.navbar {
+    background: linear-gradient(135deg, #6f42c1 0%, #5a32a3 100%) !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.navbar-nav .nav-link {
+    color: rgba(255,255,255,0.9) !important;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffffff !important;
+}
+
+.navbar-nav .nav-link.active {
+    color: #ffffff !important;
+    font-weight: bold;
+}
+
 /* Styles pour les formulaires */
 .form-control {
-    border-radius: 0.375rem;
-    border: 1px solid #ced4da;
+    border-radius: 0.5rem;
+    border: 2px solid #404040;
+    padding: 0.75rem;
+    font-size: 1rem;
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .form-control:focus {
-    border-color: #007bff;
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    border-color: #6f42c1;
+    box-shadow: 0 0 0 0.2rem rgba(111, 66, 193, 0.15);
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+}
+
+.form-label {
+    font-weight: 600;
+    color: #b0b0b0;
+    margin-bottom: 0.5rem;
 }
 
 .btn-primary {
-    background-color: #007bff;
-    border-color: #007bff;
-    border-radius: 0.375rem;
+    background: linear-gradient(135deg, #6f42c1 0%, #5a32a3 100%);
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
 }
 
 .btn-primary:hover {
-    background-color: #0056b3;
-    border-color: #004085;
+    background: linear-gradient(135deg, #5a32a3 0%, #4c2a8a 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(111, 66, 193, 0.3);
+}
+
+.btn-success {
+    background: linear-gradient(135deg, #28a745 0%, #1e7e34 100%);
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-success:hover {
+    background: linear-gradient(135deg, #1e7e34 0%, #155724 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+}
+
+.btn-outline-danger {
+    border: 2px solid #dc3545;
+    color: #dc3545;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-danger:hover {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    color: white;
+    transform: translateY(-1px);
 }
 
 /* Styles pour les cartes de produits */
 .card {
     border: none;
-    border-radius: 0.5rem;
-    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
-    transition: box-shadow 0.15s ease-in-out;
+    border-radius: 1rem;
+    background-color: #2a2a2a;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    overflow: hidden;
 }
 
 .card:hover {
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    transform: translateY(-5px);
+}
+
+.card-body {
+    padding: 1.5rem;
 }
 
 .card-img-top {
-    border-top-left-radius: 0.5rem;
-    border-top-right-radius: 0.5rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
     height: 200px;
     object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.05);
 }
 
 .card-title {
-    font-size: 1.1rem;
-    font-weight: bold;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #e0e0e0;
+    margin-bottom: 0.5rem;
 }
 
 .card-text {
-    color: #6c757d;
+    color: #b0b0b0;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+.card .card-text:last-child {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #6f42c1;
+    margin-bottom: 0;
 }
 
 /* Styles pour le panier */
 .cart-item {
-    border-bottom: 1px solid #dee2e6;
-    padding: 1rem 0;
+    border-bottom: 1px solid #404040;
+    padding: 1.5rem 0;
+    background-color: #2a2a2a;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
 .cart-item:last-child {
     border-bottom: none;
+    margin-bottom: 0;
 }
 
 .cart-total {
-    font-size: 1.25rem;
-    font-weight: bold;
+    font-size: 1.5rem;
+    font-weight: 700;
     color: #28a745;
+    text-align: center;
+    padding: 1rem;
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    color: white;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
 }
 
 /* Styles pour la page de compte */
+#user-info {
+    background-color: #2a2a2a;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
 #user-info p {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+}
+
+#user-info strong {
+    color: #b0b0b0;
 }
 
 #user-orders {
     max-height: 400px;
     overflow-y: auto;
+    background-color: #2a2a2a;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Styles pour les messages d'alerte */
+.alert {
+    border-radius: 0.5rem;
+    border: none;
+    padding: 1rem 1.5rem;
+    font-weight: 500;
+}
+
+.alert-success {
+    background-color: #2d5a2d;
+    color: #a8d5a8;
+    border-left: 4px solid #28a745;
+}
+
+.alert-danger {
+    background-color: #5a2d2d;
+    color: #d5a8a8;
+    border-left: 4px solid #dc3545;
+}
+
+/* Styles pour les boutons d'action */
+.btn-sm {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    border-radius: 0.375rem;
+    font-weight: 600;
+}
+
+/* Styles pour les tableaux */
+.table {
+    margin-bottom: 0;
+    color: #e0e0e0;
+    background-color: #2a2a2a;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.table th {
+    background-color: #333333;
+    font-weight: 700;
+    color: #e0e0e0;
+    border-bottom: 2px solid #404040;
+    padding: 1rem;
+}
+
+.table td {
+    padding: 1rem;
+    vertical-align: middle;
+    border-bottom: 1px solid #404040;
+}
+
+/* Styles pour les formulaires de checkout */
+.checkout-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.checkout-summary {
+    background-color: #2a2a2a;
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 2px solid #404040;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.checkout-summary h4 {
+    color: #b0b0b0;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+/* Styles pour les badges */
+.badge {
+    font-size: 0.75rem;
+    padding: 0.5em 0.75em;
+    border-radius: 0.375rem;
+    font-weight: 600;
+}
+
+.badge.bg-secondary {
+    background-color: #6c757d !important;
 }
 
 /* Styles responsives */
@@ -99,71 +304,49 @@ body {
     .card-img-top {
         height: 150px;
     }
-}
 
-/* Styles pour les messages d'alerte */
-.alert {
-    border-radius: 0.375rem;
-    border: none;
-}
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 
-.alert-success {
-    background-color: #d4edda;
-    color: #155724;
-}
+    .card-body {
+        padding: 1rem;
+    }
 
-.alert-danger {
-    background-color: #f8d7da;
-    color: #721c24;
-}
+    h1 {
+        font-size: 2rem;
+    }
 
-/* Styles pour les boutons d'action */
-.btn-sm {
-    padding: 0.25rem 0.5rem;
-    font-size: 0.875rem;
-    line-height: 1.5;
-    border-radius: 0.2rem;
-}
-
-/* Styles pour les tableaux */
-.table {
-    margin-bottom: 0;
-}
-
-.table th {
-    border-top: none;
-    font-weight: bold;
-    color: #495057;
-}
-
-.table td {
-    vertical-align: middle;
-}
-
-/* Styles pour les formulaires de checkout */
-.checkout-form .form-group {
-    margin-bottom: 1.5rem;
-}
-
-.checkout-summary {
-    background-color: #f8f9fa;
-    padding: 1.5rem;
-    border-radius: 0.5rem;
-    border: 1px solid #dee2e6;
+    h3 {
+        font-size: 1.5rem;
+    }
 }
 
 /* Animations */
 .fade-in {
-    animation: fadeIn 0.5s ease-in;
+    animation: fadeIn 0.6s ease-in-out;
 }
 
 @keyframes fadeIn {
     from {
         opacity: 0;
+        transform: translateY(20px);
     }
     to {
         opacity: 1;
+        transform: translateY(0);
     }
+}
+
+/* Animations pour les boutons */
+.btn {
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 /* Styles pour les étoiles de notation */
@@ -175,31 +358,73 @@ body {
     margin-right: 0.125rem;
 }
 
-/* Styles pour les badges */
-.badge {
-    font-size: 0.75rem;
-    padding: 0.35em 0.65em;
-}
-
 /* Styles pour les tooltips */
 .tooltip-inner {
-    background-color: #000;
-    color: #fff;
-    border-radius: 0.25rem;
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
 }
 
 .tooltip.bs-tooltip-top .arrow::before {
-    border-top-color: #000;
+    border-top-color: #2a2a2a;
 }
 
 .tooltip.bs-tooltip-bottom .arrow::before {
-    border-bottom-color: #000;
+    border-bottom-color: #2a2a2a;
 }
 
 .tooltip.bs-tooltip-left .arrow::before {
-    border-left-color: #000;
+    border-left-color: #2a2a2a;
 }
 
 .tooltip.bs-tooltip-right .arrow::before {
-    border-right-color: #000;
+    border-right-color: #2a2a2a;
+}
+
+/* Styles supplémentaires pour améliorer la lisibilité */
+h1, h2, h3, h4, h5, h6 {
+    color: #e0e0e0;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+p {
+    color: #b0b0b0;
+}
+
+.text-muted {
+    color: #808080 !important;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mt-4 {
+    margin-top: 1.5rem !important;
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem !important;
+}
+
+/* Styles pour les inputs groupés */
+.input-group-text {
+    background-color: #404040;
+    color: #b0b0b0;
+    border: 2px solid #404040;
+    font-weight: 600;
+}
+
+/* Styles pour les cartes d'admin */
+.admin-card {
+    background: linear-gradient(135deg, #2a2a2a 0%, #333333 100%);
+    border: 2px solid #404040;
+    transition: all 0.3s ease;
+}
+
+.admin-card:hover {
+    border-color: #6f42c1;
+    box-shadow: 0 8px 25px rgba(111, 66, 193, 0.1);
 }
