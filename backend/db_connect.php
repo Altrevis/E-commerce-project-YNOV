@@ -3,8 +3,8 @@ session_start();
 
 $host = 'localhost';
 $dbname = 'ecommerce-ynov';
-$username = 'leo';
-$password = 'leo';
+$username = 'alexandre';
+$password = 'ynov2526';
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);

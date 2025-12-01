@@ -84,19 +84,20 @@ CREATE TABLE `clients` (
   `telephone` varchar(20) DEFAULT NULL,
   `mot_de_passe` varchar(255) NOT NULL,
   `date_creation` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
-  `role` enum('client','vendeur','gestionnaire_stock','comptable') DEFAULT 'client'
+  `role` enum('client','vendeur','gestionnaire_stock','comptable') DEFAULT 'client',
+  `solde` decimal(10,2) NOT NULL DEFAULT 1500.00
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Déchargement des données de la table `clients`
 --
 
-INSERT INTO `clients` (`id_client`, `prenom`, `nom`, `email`, `telephone`, `mot_de_passe`, `date_creation`, `role`) VALUES
-(1, 'Jean', 'Dupont', 'jean.dupont@email.com', '0600000001', 'hash123', '2025-10-02 07:47:58', 'client'),
-(2, 'Marie', 'Durand', 'marie.durand@email.com', '0600000002', 'hash456', '2025-10-02 07:47:58', 'client'),
-(3, 'Paul', 'Martin', 'paul.martin@email.com', '0600000003', 'hash789', '2025-10-02 07:47:58', 'vendeur'),
-(4, 'Claire', 'Bernard', 'claire.bernard@email.com', '0600000004', 'hash321', '2025-10-02 07:47:58', 'gestionnaire_stock'),
-(5, 'Luc', 'Petit', 'luc.petit@email.com', '0600000005', 'hash654', '2025-10-02 07:47:58', 'comptable');
+INSERT INTO `clients` (`id_client`, `prenom`, `nom`, `email`, `telephone`, `mot_de_passe`, `date_creation`, `role`, `solde`) VALUES
+(1, 'Jean', 'Dupont', 'jean.dupont@email.com', '0600000001', 'hash123', '2025-10-02 07:47:58', 'client', 1500.00),
+(2, 'Marie', 'Durand', 'marie.durand@email.com', '0600000002', 'hash456', '2025-10-02 07:47:58', 'client', 1500.00),
+(3, 'Paul', 'Martin', 'paul.martin@email.com', '0600000003', 'hash789', '2025-10-02 07:47:58', 'vendeur', 1500.00),
+(4, 'Claire', 'Bernard', 'claire.bernard@email.com', '0600000004', 'hash321', '2025-10-02 07:47:58', 'gestionnaire_stock', 1500.00),
+(5, 'Luc', 'Petit', 'luc.petit@email.com', '0600000005', 'hash654', '2025-10-02 07:47:58', 'comptable', 1500.00);
 
 -- --------------------------------------------------------
 
